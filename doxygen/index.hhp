@@ -3,16 +3,16 @@ Compatibility=1.1
 Full-text search=Yes
 Contents file=index.hhc
 Default Window=main
-Default topic=main.html
+Default topic=index.html
 Index file=index.hhk
 Language=0x409 English (United States)
 Title=Ninja
 
 [WINDOWS]
-main="Ninja","index.hhc","index.hhk","main.html","main.html",,,,,0x23520,,0x10387e,,,,,,,,0
+main="Ninja","index.hhc","index.hhk","index.html","index.html",,,,,0x23520,,0x10387e,,,,,,,,0
 
 [FILES]
-main.html
+index.html
 doxygen__mainpage_source.html
 browse_8cc_source.html
 browse_8h_source.html
@@ -25,6 +25,8 @@ build__test_8cc_source.html
 clean_8cc_source.html
 clean_8h_source.html
 clean__test_8cc_source.html
+disk__interface_8cc_source.html
+disk__interface_8h_source.html
 eval__env_8cc_source.html
 eval__env_8h_source.html
 getopt_8h_source.html
@@ -35,8 +37,6 @@ graphviz_8cc_source.html
 graphviz_8h_source.html
 hash__map_8h_source.html
 ninja_8cc_source.html
-ninja_8h_source.html
-ninja__jumble_8cc_source.html
 ninja__test_8cc_source.html
 parser__perftest_8cc_source.html
 parsers_8cc_source.html
@@ -44,6 +44,8 @@ parsers_8h_source.html
 parsers__test_8cc_source.html
 stat__cache_8cc_source.html
 stat__cache_8h_source.html
+state_8cc_source.html
+state_8h_source.html
 subprocess-win32_8cc_source.html
 subprocess_8cc_source.html
 subprocess_8h_source.html
@@ -65,6 +67,8 @@ build__test_8cc.html
 clean_8cc.html
 clean_8h.html
 clean__test_8cc.html
+disk__interface_8cc.html
+disk__interface_8h.html
 eval__env_8cc.html
 eval__env_8h.html
 getopt_8h.html
@@ -75,8 +79,6 @@ graphviz_8cc.html
 graphviz_8h.html
 hash__map_8h.html
 ninja_8cc.html
-ninja_8h.html
-ninja__jumble_8cc.html
 ninja__test_8cc.html
 parser__perftest_8cc.html
 parsers_8cc.html
@@ -84,6 +86,8 @@ parsers_8h.html
 parsers__test_8cc.html
 stat__cache_8cc.html
 stat__cache_8h.html
+state_8cc.html
+state_8h.html
 subprocess-win32_8cc.html
 subprocess_8cc.html
 subprocess_8h.html
@@ -189,8 +193,6 @@ structRealDiskInterface.html
 structRealDiskInterface-members.html
 structRule.html
 structRule-members.html
-structSourceLocation.html
-structSourceLocation-members.html
 structStatCache.html
 structStatCache-members.html
 structState.html
@@ -228,6 +230,10 @@ globals_vars.html
 globals_type.html
 globals_defs.html
 tabs.css
-tab_b.gif
-tab_l.gif
-tab_r.gif
+tab_a.png
+tab_b.png
+tab_h.png
+tab_s.png
+nav_h.png
+nav_f.png
+bc_s.png

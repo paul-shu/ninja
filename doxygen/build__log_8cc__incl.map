@@ -1,9 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" href="$build__log_8h.html" title="build_log.h" alt="" coords="5,160,88,189"/>
-<area shape="rect" href="$build_8h.html" title="build.h" alt="" coords="407,83,465,112"/>
-<area shape="rect" href="$graph_8h.html" title="graph.h" alt="" coords="263,83,327,112"/>
-<area shape="rect" href="$ninja_8h.html" title="ninja.h" alt="" coords="489,83,548,112"/>
-<area shape="rect" href="$eval__env_8h.html" title="eval_env.h" alt="" coords="213,160,296,189"/>
-<area shape="rect" href="$stat__cache_8h.html" title="stat_cache.h" alt="" coords="856,160,952,189"/>
-<area shape="rect" href="$hash__map_8h.html" title="hash_map.h" alt="" coords="859,237,949,267"/>
+<area shape="rect" id="node3" href="$build__log_8h.html" title="build_log.h" alt="" coords="5,160,88,189"/>
+<area shape="rect" id="node19" href="$build_8h.html" title="build.h" alt="" coords="323,160,381,189"/>
+<area shape="rect" id="node28" href="$graph_8h.html" title="graph.h" alt="" coords="203,83,267,112"/>
+<area shape="rect" id="node32" href="$eval__env_8h.html" title="eval_env.h" alt="" coords="112,160,197,189"/>
 </map>

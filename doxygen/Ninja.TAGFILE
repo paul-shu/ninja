@@ -17,7 +17,7 @@
     <name>browse.cc</name>
     <path>/home/evanm/projects/ninja/src/</path>
     <filename>browse_8cc</filename>
-    <includes id="browse_8cc" name="browse.cc" local="yes" imported="no">browse.h</includes>
+    <includes id="browse_8h" name="browse.h" local="yes" imported="no">browse.h</includes>
     <member kind="function">
       <type>void</type>
       <name>RunBrowsePython</name>
@@ -42,9 +42,13 @@
     <name>build.cc</name>
     <path>/home/evanm/projects/ninja/src/</path>
     <filename>build_8cc</filename>
-    <includes id="build_8cc" name="build.cc" local="yes" imported="no">build.h</includes>
-    <includes id="eval__env_8h" name="eval_env.h" local="yes" imported="no">eval_env.h</includes>
-    <includes id="ninja_8h" name="ninja.h" local="yes" imported="no">ninja.h</includes>
+    <includes id="build_8h" name="build.h" local="yes" imported="no">build.h</includes>
+    <includes id="build__log_8h" name="build_log.h" local="yes" imported="no">build_log.h</includes>
+    <includes id="disk__interface_8h" name="disk_interface.h" local="yes" imported="no">disk_interface.h</includes>
+    <includes id="graph_8h" name="graph.h" local="yes" imported="no">graph.h</includes>
+    <includes id="state_8h" name="state.h" local="yes" imported="no">state.h</includes>
+    <includes id="subprocess_8h" name="subprocess.h" local="yes" imported="no">subprocess.h</includes>
+    <includes id="util_8h" name="util.h" local="yes" imported="no">util.h</includes>
     <class kind="struct">BuildStatus</class>
     <class kind="struct">DryRunCommandRunner</class>
     <class kind="struct">RealCommandRunner</class>
@@ -65,7 +69,6 @@
     <includes id="build__log_8h" name="build_log.h" local="yes" imported="no">build_log.h</includes>
     <includes id="build_8h" name="build.h" local="yes" imported="no">build.h</includes>
     <includes id="graph_8h" name="graph.h" local="yes" imported="no">graph.h</includes>
-    <includes id="ninja_8h" name="ninja.h" local="yes" imported="no">ninja.h</includes>
   </compound>
   <compound kind="file">
     <name>build_log.h</name>
@@ -79,9 +82,15 @@
     <path>/home/evanm/projects/ninja/src/</path>
     <filename>build__log__test_8cc</filename>
     <includes id="build__log_8h" name="build_log.h" local="yes" imported="no">build_log.h</includes>
-    <includes id="build__log__test_8cc" name="build_log_test.cc" local="yes" imported="no">test.h</includes>
-    <includes id="ninja_8h" name="ninja.h" local="yes" imported="no">ninja.h</includes>
+    <includes id="test_8h" name="test.h" local="yes" imported="no">test.h</includes>
     <class kind="struct">BuildLogTest</class>
+    <member kind="function">
+      <type></type>
+      <name>TEST_F</name>
+      <anchorfile>build__log__test_8cc.html</anchorfile>
+      <anchor>ae03a9172fa1162c08264256ff54fe8cf</anchor>
+      <arglist>(BuildLogTest, WriteRead)</arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>TEST_F</name>
@@ -95,13 +104,6 @@
       <anchorfile>build__log__test_8cc.html</anchorfile>
       <anchor>a0fdba8e5e446e63aa5d25d91b3c25913</anchor>
       <arglist>(BuildLogTest, DoubleEntry)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TEST_F</name>
-      <anchorfile>build__log__test_8cc.html</anchorfile>
-      <anchor>ae03a9172fa1162c08264256ff54fe8cf</anchor>
-      <arglist>(BuildLogTest, WriteRead)</arglist>
     </member>
     <member kind="variable" static="yes">
       <type>static const char</type>
@@ -120,6 +122,13 @@
     <includes id="test_8h" name="test.h" local="yes" imported="no">test.h</includes>
     <class kind="struct">BuildTest</class>
     <class kind="struct">PlanTest</class>
+    <member kind="function">
+      <type></type>
+      <name>TEST_F</name>
+      <anchorfile>build__test_8cc.html</anchorfile>
+      <anchor>aa2d4879a1416ae4b4db00986d0b091eb</anchor>
+      <arglist>(PlanTest, Basic)</arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>TEST_F</name>
@@ -267,22 +276,16 @@
       <anchor>a465c1e426b27db03a5e58068f40918e6</anchor>
       <arglist>(PlanTest, DoubleOutputDirect)</arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>TEST_F</name>
-      <anchorfile>build__test_8cc.html</anchorfile>
-      <anchor>aa2d4879a1416ae4b4db00986d0b091eb</anchor>
-      <arglist>(PlanTest, Basic)</arglist>
-    </member>
   </compound>
   <compound kind="file">
     <name>clean.cc</name>
     <path>/home/evanm/projects/ninja/src/</path>
     <filename>clean_8cc</filename>
-    <includes id="clean_8cc" name="clean.cc" local="yes" imported="no">clean.h</includes>
+    <includes id="clean_8h" name="clean.h" local="yes" imported="no">clean.h</includes>
     <includes id="build_8h" name="build.h" local="yes" imported="no">build.h</includes>
+    <includes id="disk__interface_8h" name="disk_interface.h" local="yes" imported="no">disk_interface.h</includes>
     <includes id="graph_8h" name="graph.h" local="yes" imported="no">graph.h</includes>
-    <includes id="ninja_8h" name="ninja.h" local="yes" imported="no">ninja.h</includes>
+    <includes id="state_8h" name="state.h" local="yes" imported="no">state.h</includes>
     <includes id="util_8h" name="util.h" local="yes" imported="no">util.h</includes>
   </compound>
   <compound kind="file">
@@ -300,6 +303,13 @@
     <includes id="build_8h" name="build.h" local="yes" imported="no">build.h</includes>
     <includes id="test_8h" name="test.h" local="yes" imported="no">test.h</includes>
     <class kind="struct">CleanTest</class>
+    <member kind="function">
+      <type></type>
+      <name>TEST_F</name>
+      <anchorfile>clean__test_8cc.html</anchorfile>
+      <anchor>ae2a8749b47d6d2637a868585050aca1e</anchor>
+      <arglist>(CleanTest, CleanAll)</arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>TEST_F</name>
@@ -342,13 +352,20 @@
       <anchor>a1b871b71139af12e10efb57a9af6c214</anchor>
       <arglist>(CleanTest, CleanAllDryRun)</arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>TEST_F</name>
-      <anchorfile>clean__test_8cc.html</anchorfile>
-      <anchor>ae2a8749b47d6d2637a868585050aca1e</anchor>
-      <arglist>(CleanTest, CleanAll)</arglist>
-    </member>
+  </compound>
+  <compound kind="file">
+    <name>disk_interface.cc</name>
+    <path>/home/evanm/projects/ninja/src/</path>
+    <filename>disk__interface_8cc</filename>
+    <includes id="disk__interface_8h" name="disk_interface.h" local="yes" imported="no">disk_interface.h</includes>
+    <includes id="util_8h" name="util.h" local="yes" imported="no">util.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>disk_interface.h</name>
+    <path>/home/evanm/projects/ninja/src/</path>
+    <filename>disk__interface_8h</filename>
+    <class kind="struct">DiskInterface</class>
+    <class kind="struct">RealDiskInterface</class>
   </compound>
   <compound kind="file">
     <name>eval_env.cc</name>
@@ -460,8 +477,9 @@
     <filename>graph_8cc</filename>
     <includes id="graph_8h" name="graph.h" local="yes" imported="no">graph.h</includes>
     <includes id="build__log_8h" name="build_log.h" local="yes" imported="no">build_log.h</includes>
-    <includes id="ninja_8h" name="ninja.h" local="yes" imported="no">ninja.h</includes>
-    <includes id="graph_8cc" name="graph.cc" local="yes" imported="no">parsers.h</includes>
+    <includes id="disk__interface_8h" name="disk_interface.h" local="yes" imported="no">disk_interface.h</includes>
+    <includes id="parsers_8h" name="parsers.h" local="yes" imported="no">parsers.h</includes>
+    <includes id="state_8h" name="state.h" local="yes" imported="no">state.h</includes>
     <includes id="util_8h" name="util.h" local="yes" imported="no">util.h</includes>
     <class kind="struct">EdgeEnv</class>
   </compound>
@@ -482,6 +500,13 @@
     <includes id="graph_8h" name="graph.h" local="yes" imported="no">graph.h</includes>
     <includes id="test_8h" name="test.h" local="yes" imported="no">test.h</includes>
     <class kind="struct">GraphTest</class>
+    <member kind="function">
+      <type></type>
+      <name>TEST_F</name>
+      <anchorfile>graph__test_8cc.html</anchorfile>
+      <anchor>ae4a824b98bb0e3fd42137844314c2ebb</anchor>
+      <arglist>(GraphTest, MissingImplicit)</arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>TEST_F</name>
@@ -517,19 +542,12 @@
       <anchor>a36484d0b766fc2462290719e41a11063</anchor>
       <arglist>(GraphTest, ModifiedImplicit)</arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>TEST_F</name>
-      <anchorfile>graph__test_8cc.html</anchorfile>
-      <anchor>ae4a824b98bb0e3fd42137844314c2ebb</anchor>
-      <arglist>(GraphTest, MissingImplicit)</arglist>
-    </member>
   </compound>
   <compound kind="file">
     <name>graphviz.cc</name>
     <path>/home/evanm/projects/ninja/src/</path>
     <filename>graphviz_8cc</filename>
-    <includes id="graphviz_8cc" name="graphviz.cc" local="yes" imported="no">graphviz.h</includes>
+    <includes id="graphviz_8h" name="graphviz.h" local="yes" imported="no">graphviz.h</includes>
     <includes id="graph_8h" name="graph.h" local="yes" imported="no">graph.h</includes>
   </compound>
   <compound kind="file">
@@ -549,16 +567,16 @@
     <name>ninja.cc</name>
     <path>/home/evanm/projects/ninja/src/</path>
     <filename>ninja_8cc</filename>
-    <includes id="ninja_8h" name="ninja.h" local="yes" imported="no">ninja.h</includes>
     <includes id="getopt_8h" name="getopt.h" local="no" imported="no">getopt.h</includes>
     <includes id="browse_8h" name="browse.h" local="yes" imported="no">browse.h</includes>
     <includes id="build_8h" name="build.h" local="yes" imported="no">build.h</includes>
     <includes id="build__log_8h" name="build_log.h" local="yes" imported="no">build_log.h</includes>
+    <includes id="clean_8h" name="clean.h" local="yes" imported="no">clean.h</includes>
     <includes id="graph_8h" name="graph.h" local="yes" imported="no">graph.h</includes>
     <includes id="graphviz_8h" name="graphviz.h" local="yes" imported="no">graphviz.h</includes>
     <includes id="parsers_8h" name="parsers.h" local="yes" imported="no">parsers.h</includes>
+    <includes id="state_8h" name="state.h" local="yes" imported="no">state.h</includes>
     <includes id="util_8h" name="util.h" local="yes" imported="no">util.h</includes>
-    <includes id="clean_8h" name="clean.h" local="yes" imported="no">clean.h</includes>
     <member kind="function">
       <type>int</type>
       <name>main</name>
@@ -568,36 +586,9 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>ninja.h</name>
-    <path>/home/evanm/projects/ninja/src/</path>
-    <filename>ninja_8h</filename>
-    <includes id="eval__env_8h" name="eval_env.h" local="yes" imported="no">eval_env.h</includes>
-    <includes id="stat__cache_8h" name="stat_cache.h" local="yes" imported="no">stat_cache.h</includes>
-    <class kind="struct">DiskInterface</class>
-    <class kind="struct">RealDiskInterface</class>
-    <class kind="struct">State</class>
-  </compound>
-  <compound kind="file">
-    <name>ninja_jumble.cc</name>
-    <path>/home/evanm/projects/ninja/src/</path>
-    <filename>ninja__jumble_8cc</filename>
-    <includes id="ninja_8h" name="ninja.h" local="yes" imported="no">ninja.h</includes>
-    <includes id="build__log_8h" name="build_log.h" local="yes" imported="no">build_log.h</includes>
-    <includes id="graph_8h" name="graph.h" local="yes" imported="no">graph.h</includes>
-    <includes id="util_8h" name="util.h" local="yes" imported="no">util.h</includes>
-    <member kind="function">
-      <type>string</type>
-      <name>DirName</name>
-      <anchorfile>ninja__jumble_8cc.html</anchorfile>
-      <anchor>a5572d5af34274b7f583292461ebd4524</anchor>
-      <arglist>(const string &amp;path)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
     <name>ninja_test.cc</name>
     <path>/home/evanm/projects/ninja/src/</path>
     <filename>ninja__test_8cc</filename>
-    <includes id="ninja_8h" name="ninja.h" local="yes" imported="no">ninja.h</includes>
     <includes id="build_8h" name="build.h" local="yes" imported="no">build.h</includes>
     <includes id="graph_8h" name="graph.h" local="yes" imported="no">graph.h</includes>
     <includes id="parsers_8h" name="parsers.h" local="yes" imported="no">parsers.h</includes>
@@ -609,43 +600,8 @@
       <type></type>
       <name>TEST</name>
       <anchorfile>ninja__test_8cc.html</anchorfile>
-      <anchor>aace0a997d745d25c2ddebc7df053a18e</anchor>
-      <arglist>(EvalString, Dollars)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TEST</name>
-      <anchorfile>ninja__test_8cc.html</anchorfile>
-      <anchor>a4bc488998a3e53aa967538cde49f7d2a</anchor>
-      <arglist>(EvalString, Curlies)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TEST</name>
-      <anchorfile>ninja__test_8cc.html</anchorfile>
-      <anchor>aa0aa8e69144cced767a8f5b8ead17c88</anchor>
-      <arglist>(EvalString, CurlyError)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TEST</name>
-      <anchorfile>ninja__test_8cc.html</anchorfile>
-      <anchor>ac9b4f80a36658531d275c60790c2eb39</anchor>
-      <arglist>(EvalString, Error)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TEST</name>
-      <anchorfile>ninja__test_8cc.html</anchorfile>
-      <anchor>a7b6612c6c68e04a58a7cf79ff2d6940a</anchor>
-      <arglist>(EvalString, OneVariableUpperCase)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TEST</name>
-      <anchorfile>ninja__test_8cc.html</anchorfile>
-      <anchor>a5099e35c784f4c79a053303d7031af6f</anchor>
-      <arglist>(EvalString, OneVariable)</arglist>
+      <anchor>a4f9a447c1054028cbe99d8f6227bb834</anchor>
+      <arglist>(State, Basic)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -658,8 +614,50 @@
       <type></type>
       <name>TEST</name>
       <anchorfile>ninja__test_8cc.html</anchorfile>
-      <anchor>a4f9a447c1054028cbe99d8f6227bb834</anchor>
-      <arglist>(State, Basic)</arglist>
+      <anchor>a7b6612c6c68e04a58a7cf79ff2d6940a</anchor>
+      <arglist>(EvalString, OneVariableUpperCase)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TEST</name>
+      <anchorfile>ninja__test_8cc.html</anchorfile>
+      <anchor>aace0a997d745d25c2ddebc7df053a18e</anchor>
+      <arglist>(EvalString, Dollars)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TEST</name>
+      <anchorfile>ninja__test_8cc.html</anchorfile>
+      <anchor>ac9b4f80a36658531d275c60790c2eb39</anchor>
+      <arglist>(EvalString, Error)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TEST</name>
+      <anchorfile>ninja__test_8cc.html</anchorfile>
+      <anchor>a5099e35c784f4c79a053303d7031af6f</anchor>
+      <arglist>(EvalString, OneVariable)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TEST</name>
+      <anchorfile>ninja__test_8cc.html</anchorfile>
+      <anchor>aa0aa8e69144cced767a8f5b8ead17c88</anchor>
+      <arglist>(EvalString, CurlyError)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TEST</name>
+      <anchorfile>ninja__test_8cc.html</anchorfile>
+      <anchor>a4bc488998a3e53aa967538cde49f7d2a</anchor>
+      <arglist>(EvalString, Curlies)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TEST_F</name>
+      <anchorfile>ninja__test_8cc.html</anchorfile>
+      <anchor>a512949d30eaad276164526d1b4476fa6</anchor>
+      <arglist>(StatTest, Simple)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -672,22 +670,8 @@
       <type></type>
       <name>TEST_F</name>
       <anchorfile>ninja__test_8cc.html</anchorfile>
-      <anchor>a3670a1946c58f937efa845edc4d19ec0</anchor>
-      <arglist>(DiskInterfaceTest, MakeDirs)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TEST_F</name>
-      <anchorfile>ninja__test_8cc.html</anchorfile>
-      <anchor>a753c6232f09791d8da33722b8e441357</anchor>
-      <arglist>(DiskInterfaceTest, ReadFile)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TEST_F</name>
-      <anchorfile>ninja__test_8cc.html</anchorfile>
-      <anchor>ad91ea293be02b4b0ccd5647a16ebe537</anchor>
-      <arglist>(DiskInterfaceTest, Stat)</arglist>
+      <anchor>a86e1fd09465c9159cb4e9dc65ffdad03</anchor>
+      <arglist>(StatTest, Tree)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -700,8 +684,15 @@
       <type></type>
       <name>TEST_F</name>
       <anchorfile>ninja__test_8cc.html</anchorfile>
-      <anchor>a86e1fd09465c9159cb4e9dc65ffdad03</anchor>
-      <arglist>(StatTest, Tree)</arglist>
+      <anchor>a753c6232f09791d8da33722b8e441357</anchor>
+      <arglist>(DiskInterfaceTest, ReadFile)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TEST_F</name>
+      <anchorfile>ninja__test_8cc.html</anchorfile>
+      <anchor>a3670a1946c58f937efa845edc4d19ec0</anchor>
+      <arglist>(DiskInterfaceTest, MakeDirs)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -714,8 +705,8 @@
       <type></type>
       <name>TEST_F</name>
       <anchorfile>ninja__test_8cc.html</anchorfile>
-      <anchor>a512949d30eaad276164526d1b4476fa6</anchor>
-      <arglist>(StatTest, Simple)</arglist>
+      <anchor>ad91ea293be02b4b0ccd5647a16ebe537</anchor>
+      <arglist>(DiskInterfaceTest, Stat)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -738,7 +729,7 @@
     <filename>parsers_8cc</filename>
     <includes id="parsers_8h" name="parsers.h" local="yes" imported="no">parsers.h</includes>
     <includes id="graph_8h" name="graph.h" local="yes" imported="no">graph.h</includes>
-    <includes id="ninja_8h" name="ninja.h" local="yes" imported="no">ninja.h</includes>
+    <includes id="state_8h" name="state.h" local="yes" imported="no">state.h</includes>
     <includes id="util_8h" name="util.h" local="yes" imported="no">util.h</includes>
     <member kind="function" static="yes">
       <type>static bool</type>
@@ -755,7 +746,6 @@
     <class kind="struct">ManifestParser::FileReader</class>
     <class kind="struct">MakefileParser</class>
     <class kind="struct">ManifestParser</class>
-    <class kind="struct">SourceLocation</class>
     <class kind="struct">Token</class>
     <class kind="struct">Tokenizer</class>
   </compound>
@@ -765,14 +755,14 @@
     <filename>parsers__test_8cc</filename>
     <includes id="parsers_8h" name="parsers.h" local="yes" imported="no">parsers.h</includes>
     <includes id="graph_8h" name="graph.h" local="yes" imported="no">graph.h</includes>
-    <includes id="ninja_8h" name="ninja.h" local="yes" imported="no">ninja.h</includes>
+    <includes id="state_8h" name="state.h" local="yes" imported="no">state.h</includes>
     <class kind="struct">ParserTest</class>
     <member kind="function">
       <type></type>
       <name>TEST</name>
       <anchorfile>parsers__test_8cc.html</anchorfile>
-      <anchor>ab804f2a3ad5009e2a308bd65d3f5bc84</anchor>
-      <arglist>(MakefileParser, Continuation)</arglist>
+      <anchor>a4770cbb591f757ba74a04dfe584b371b</anchor>
+      <arglist>(MakefileParser, Basic)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -785,8 +775,29 @@
       <type></type>
       <name>TEST</name>
       <anchorfile>parsers__test_8cc.html</anchorfile>
-      <anchor>a4770cbb591f757ba74a04dfe584b371b</anchor>
-      <arglist>(MakefileParser, Basic)</arglist>
+      <anchor>ab804f2a3ad5009e2a308bd65d3f5bc84</anchor>
+      <arglist>(MakefileParser, Continuation)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TEST_F</name>
+      <anchorfile>parsers__test_8cc.html</anchorfile>
+      <anchor>ac1a45708fd3409fe3968baaa17b2126e</anchor>
+      <arglist>(ParserTest, PathVariables)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TEST_F</name>
+      <anchorfile>parsers__test_8cc.html</anchorfile>
+      <anchor>ad196afd64815d178720f584d3ce73039</anchor>
+      <arglist>(ParserTest, DefaultStatements)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TEST_F</name>
+      <anchorfile>parsers__test_8cc.html</anchorfile>
+      <anchor>a80bd67dbe8aa1e47b42914010f73cfe0</anchor>
+      <arglist>(ParserTest, DefaultDefault)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -841,15 +852,15 @@
       <type></type>
       <name>TEST_F</name>
       <anchorfile>parsers__test_8cc.html</anchorfile>
-      <anchor>a4b11ad770d5209994ca895c6153aba87</anchor>
-      <arglist>(ParserTest, CanonicalizePaths)</arglist>
+      <anchor>a70997cefed3bb026523aff903efc79b0</anchor>
+      <arglist>(ParserTest, Empty)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>TEST_F</name>
       <anchorfile>parsers__test_8cc.html</anchorfile>
-      <anchor>ac1a45708fd3409fe3968baaa17b2126e</anchor>
-      <arglist>(ParserTest, PathVariables)</arglist>
+      <anchor>a00d1cdb458da473855bdc30e4892cf3c</anchor>
+      <arglist>(ParserTest, Continuation)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -883,8 +894,8 @@
       <type></type>
       <name>TEST_F</name>
       <anchorfile>parsers__test_8cc.html</anchorfile>
-      <anchor>a00d1cdb458da473855bdc30e4892cf3c</anchor>
-      <arglist>(ParserTest, Continuation)</arglist>
+      <anchor>a28171a798a0bb7c32ace6dac4cb001cf</anchor>
+      <arglist>(ParserTest, Rules)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -904,15 +915,8 @@
       <type></type>
       <name>TEST_F</name>
       <anchorfile>parsers__test_8cc.html</anchorfile>
-      <anchor>a28171a798a0bb7c32ace6dac4cb001cf</anchor>
-      <arglist>(ParserTest, Rules)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TEST_F</name>
-      <anchorfile>parsers__test_8cc.html</anchorfile>
-      <anchor>a70997cefed3bb026523aff903efc79b0</anchor>
-      <arglist>(ParserTest, Empty)</arglist>
+      <anchor>a4b11ad770d5209994ca895c6153aba87</anchor>
+      <arglist>(ParserTest, CanonicalizePaths)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -928,6 +932,22 @@
     <filename>stat__cache_8h</filename>
     <includes id="hash__map_8h" name="hash_map.h" local="yes" imported="no">hash_map.h</includes>
     <class kind="struct">StatCache</class>
+  </compound>
+  <compound kind="file">
+    <name>state.cc</name>
+    <path>/home/evanm/projects/ninja/src/</path>
+    <filename>state_8cc</filename>
+    <includes id="state_8h" name="state.h" local="yes" imported="no">state.h</includes>
+    <includes id="graph_8h" name="graph.h" local="yes" imported="no">graph.h</includes>
+    <includes id="util_8h" name="util.h" local="yes" imported="no">util.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>state.h</name>
+    <path>/home/evanm/projects/ninja/src/</path>
+    <filename>state_8h</filename>
+    <includes id="eval__env_8h" name="eval_env.h" local="yes" imported="no">eval_env.h</includes>
+    <includes id="stat__cache_8h" name="stat_cache.h" local="yes" imported="no">stat_cache.h</includes>
+    <class kind="struct">State</class>
   </compound>
   <compound kind="file">
     <name>subprocess-win32.cc</name>
@@ -960,6 +980,13 @@
       <type></type>
       <name>TEST_F</name>
       <anchorfile>subprocess__test_8cc.html</anchorfile>
+      <anchor>a775f99b7e07e1594fca350359ab00a1b</anchor>
+      <arglist>(SubprocessTest, BadCommandStderr)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TEST_F</name>
+      <anchorfile>subprocess__test_8cc.html</anchorfile>
       <anchor>a21f43215ecf6c654a031a94126341d95</anchor>
       <arglist>(SubprocessTest, SetWithMulti)</arglist>
     </member>
@@ -969,13 +996,6 @@
       <anchorfile>subprocess__test_8cc.html</anchorfile>
       <anchor>ac98552282f3b231a41e3fa3edd665620</anchor>
       <arglist>(SubprocessTest, SetWithSingle)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TEST_F</name>
-      <anchorfile>subprocess__test_8cc.html</anchorfile>
-      <anchor>a775f99b7e07e1594fca350359ab00a1b</anchor>
-      <arglist>(SubprocessTest, BadCommandStderr)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -996,7 +1016,8 @@
     <name>test.h</name>
     <path>/home/evanm/projects/ninja/src/</path>
     <filename>test_8h</filename>
-    <includes id="ninja_8h" name="ninja.h" local="yes" imported="no">ninja.h</includes>
+    <includes id="disk__interface_8h" name="disk_interface.h" local="yes" imported="no">disk_interface.h</includes>
+    <includes id="state_8h" name="state.h" local="yes" imported="no">state.h</includes>
     <class kind="struct">VirtualFileSystem::Entry</class>
     <class kind="struct">StateTestWithBuiltinRules</class>
     <class kind="struct">VirtualFileSystem</class>
@@ -1014,11 +1035,11 @@
     <filename>util_8cc</filename>
     <includes id="util_8h" name="util.h" local="yes" imported="no">util.h</includes>
     <member kind="function">
-      <type>bool</type>
+      <type>void</type>
       <name>CanonicalizePath</name>
       <anchorfile>util_8cc.html</anchorfile>
-      <anchor>abdb5937692c9c5a0fbe6cbbab7941414</anchor>
-      <arglist>(string *path, string *err)</arglist>
+      <anchor>a28ceb57113d0dae67a9257b7d12774a0</anchor>
+      <arglist>(string *path)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -1068,11 +1089,11 @@
     <path>/home/evanm/projects/ninja/src/</path>
     <filename>util_8h</filename>
     <member kind="function">
-      <type>bool</type>
+      <type>void</type>
       <name>CanonicalizePath</name>
       <anchorfile>util_8h.html</anchorfile>
-      <anchor>abdb5937692c9c5a0fbe6cbbab7941414</anchor>
-      <arglist>(string *path, string *err)</arglist>
+      <anchor>a28ceb57113d0dae67a9257b7d12774a0</anchor>
+      <arglist>(string *path)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -1127,6 +1148,13 @@
       <type></type>
       <name>TEST</name>
       <anchorfile>util__test_8cc.html</anchorfile>
+      <anchor>a0194425f5c89a3070ebe843cf3e6974d</anchor>
+      <arglist>(CanonicalizePath, PathSamples)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TEST</name>
+      <anchorfile>util__test_8cc.html</anchorfile>
       <anchor>a1e8360315e371fcc8ca080cbc43895a1</anchor>
       <arglist>(CanonicalizePath, AbsolutePath)</arglist>
     </member>
@@ -1134,8 +1162,8 @@
       <type></type>
       <name>TEST</name>
       <anchorfile>util__test_8cc.html</anchorfile>
-      <anchor>a0194425f5c89a3070ebe843cf3e6974d</anchor>
-      <arglist>(CanonicalizePath, PathSamples)</arglist>
+      <anchor>a25da3db30b890819f4754ecbc1862d39</anchor>
+      <arglist>(CanonicalizePath, UpDir)</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -1252,18 +1280,18 @@
     <name>Builder</name>
     <filename>structBuilder.html</filename>
     <member kind="function">
-      <type>bool</type>
-      <name>AddTarget</name>
-      <anchorfile>structBuilder.html</anchorfile>
-      <anchor>a3b12ba4387f2886d0cdd86985e255af4</anchor>
-      <arglist>(Node *target, string *err)</arglist>
-    </member>
-    <member kind="function">
       <type>Node *</type>
       <name>AddTarget</name>
       <anchorfile>structBuilder.html</anchorfile>
       <anchor>aacbe026e5a186342d39939ea003e7ebc</anchor>
       <arglist>(const string &amp;name, string *err)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>AddTarget</name>
+      <anchorfile>structBuilder.html</anchorfile>
+      <anchor>a3b12ba4387f2886d0cdd86985e255af4</anchor>
+      <arglist>(Node *target, string *err)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -1536,7 +1564,7 @@
       <arglist>(Edge *edge)</arglist>
     </member>
     <member kind="function">
-      <type></type>
+      <type>home evanm projects ninja src build cc home evanm projects ninja src build cc home evanm projects ninja src build cc home evanm projects ninja src build cc home evanm projects ninja src build cc home evanm projects ninja src build cc home evanm projects ninja src build cc</type>
       <name>BuildStatus</name>
       <anchorfile>structBuildStatus.html</anchorfile>
       <anchor>ae0ee802c831f69a934e6d2205698e600</anchor>
@@ -1996,36 +2024,36 @@
       <type>virtual bool</type>
       <name>MakeDir</name>
       <anchorfile>structDiskInterface.html</anchorfile>
-      <anchor>abf89f5cfce3c775997e7b40607107779</anchor>
-      <arglist>(const string &amp;path)=0</arglist>
+      <anchor>a070608053114e5c9dfa36bb92758db30</anchor>
+      <arglist>(const std::string &amp;path)=0</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>MakeDirs</name>
       <anchorfile>structDiskInterface.html</anchorfile>
-      <anchor>a7fae01dae68b95facad54b0bc233d279</anchor>
-      <arglist>(const string &amp;path)</arglist>
+      <anchor>a27fc4c758ab7c6ea859e70451032abe5</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual string</type>
+      <type>virtual std::string</type>
       <name>ReadFile</name>
       <anchorfile>structDiskInterface.html</anchorfile>
-      <anchor>aed889f19b478039bd8d315fe965440ea</anchor>
-      <arglist>(const string &amp;path, string *err)=0</arglist>
+      <anchor>a4bf5b9961bbefd2f8982b742c7640aba</anchor>
+      <arglist>(const std::string &amp;path, std::string *err)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>RemoveFile</name>
       <anchorfile>structDiskInterface.html</anchorfile>
-      <anchor>ad7442b7e0b10e0737c56667d967e9f76</anchor>
-      <arglist>(const string &amp;path)=0</arglist>
+      <anchor>a4e43e3304cb9a492b9c838ebb9d4ac6b</anchor>
+      <arglist>(const std::string &amp;path)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>Stat</name>
       <anchorfile>structDiskInterface.html</anchorfile>
-      <anchor>a244784b189c39f4b91898878c3d1db65</anchor>
-      <arglist>(const string &amp;path)=0</arglist>
+      <anchor>a1c517bdda59afe399d14568ea3c3fc00</anchor>
+      <arglist>(const std::string &amp;path)=0</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual</type>
@@ -2568,6 +2596,13 @@
     </member>
     <member kind="function">
       <type>bool</type>
+      <name>ParseDefaults</name>
+      <anchorfile>structManifestParser.html</anchorfile>
+      <anchor>a5fb7c0886739f1c59beafea7eeaca2de</anchor>
+      <arglist>(string *err)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
       <name>ParseEdge</name>
       <anchorfile>structManifestParser.html</anchorfile>
       <anchor>a70208843bcad06d5796b98ba7d24ec35</anchor>
@@ -2931,36 +2966,36 @@
       <type>virtual bool</type>
       <name>MakeDir</name>
       <anchorfile>structRealDiskInterface.html</anchorfile>
-      <anchor>acf868fd64fcb5dff9cc9741bd2e5575e</anchor>
-      <arglist>(const string &amp;path)</arglist>
+      <anchor>af5594550cc29b0290b6d91af65adf4dd</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>MakeDirs</name>
       <anchorfile>structDiskInterface.html</anchorfile>
-      <anchor>a7fae01dae68b95facad54b0bc233d279</anchor>
-      <arglist>(const string &amp;path)</arglist>
+      <anchor>a27fc4c758ab7c6ea859e70451032abe5</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual string</type>
+      <type>virtual std::string</type>
       <name>ReadFile</name>
       <anchorfile>structRealDiskInterface.html</anchorfile>
-      <anchor>aca5e97e18e89f64a56fc2388d3aad69b</anchor>
-      <arglist>(const string &amp;path, string *err)</arglist>
+      <anchor>abd729e2b117e40d6c4c05c76a613bf25</anchor>
+      <arglist>(const std::string &amp;path, std::string *err)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>RemoveFile</name>
       <anchorfile>structRealDiskInterface.html</anchorfile>
-      <anchor>a95db458a6793ec41ae8727c76d11475a</anchor>
-      <arglist>(const string &amp;path)</arglist>
+      <anchor>a5e956d9948d01c02095c961ebd7d67cf</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>Stat</name>
       <anchorfile>structRealDiskInterface.html</anchorfile>
-      <anchor>abf665666c60b4603f2560801091f4931</anchor>
-      <arglist>(const string &amp;path)</arglist>
+      <anchor>a18293f5abd236b890a0aa57142910068</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual</type>
@@ -3017,38 +3052,6 @@
     </member>
   </compound>
   <compound kind="struct">
-    <name>SourceLocation</name>
-    <filename>structSourceLocation.html</filename>
-    <member kind="function">
-      <type>bool</type>
-      <name>Error</name>
-      <anchorfile>structSourceLocation.html</anchorfile>
-      <anchor>a429cbe624e86d30aadaaec19181051de</anchor>
-      <arglist>(const string &amp;message, string *err)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>SourceLocation</name>
-      <anchorfile>structSourceLocation.html</anchorfile>
-      <anchor>a3c41be4abf8909bb0a32eeaa8c73cf75</anchor>
-      <arglist>(int line, int col)</arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>column_</name>
-      <anchorfile>structSourceLocation.html</anchorfile>
-      <anchor>a4251cffa529f192b8b9153325cd17bd1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>line_</name>
-      <anchorfile>structSourceLocation.html</anchorfile>
-      <anchor>a75609c040c4aa6f780a33de9f5bd8da3</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
     <name>StatCache</name>
     <filename>structStatCache.html</filename>
     <member kind="typedef">
@@ -3091,6 +3094,13 @@
     <name>State</name>
     <filename>structState.html</filename>
     <member kind="function">
+      <type>bool</type>
+      <name>AddDefault</name>
+      <anchorfile>structState.html</anchorfile>
+      <anchor>a2bcb8195c2711b2b15faaddbb6539855</anchor>
+      <arglist>(const string &amp;path, string *error)</arglist>
+    </member>
+    <member kind="function">
       <type>Edge *</type>
       <name>AddEdge</name>
       <anchorfile>structState.html</anchorfile>
@@ -3117,6 +3127,13 @@
       <anchorfile>structState.html</anchorfile>
       <anchor>ab4bac9807e4560de48f54ef8ad229081</anchor>
       <arglist>(const Rule *rule)</arglist>
+    </member>
+    <member kind="function">
+      <type>vector&lt; Node * &gt;</type>
+      <name>DefaultNodes</name>
+      <anchorfile>structState.html</anchorfile>
+      <anchor>ac3b1ca172073b28adc6f88c10af0999f</anchor>
+      <arglist>(string *error)</arglist>
     </member>
     <member kind="function">
       <type>Node *</type>
@@ -3172,6 +3189,13 @@
       <name>build_log_</name>
       <anchorfile>structState.html</anchorfile>
       <anchor>a463348843da891ba1f7f1df149051a54</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>vector&lt; Node * &gt;</type>
+      <name>defaults_</name>
+      <anchorfile>structState.html</anchorfile>
+      <anchor>ae2ba184ebe4f549b9e6c435083c07c33</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -3247,12 +3271,26 @@
       <anchor>a603ebc2257b5febac2abfddd1657ed27</anchor>
       <arglist>(const string &amp;path)</arglist>
     </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>MakeDir</name>
+      <anchorfile>structDiskInterface.html</anchorfile>
+      <anchor>a070608053114e5c9dfa36bb92758db30</anchor>
+      <arglist>(const std::string &amp;path)=0</arglist>
+    </member>
     <member kind="function">
       <type>bool</type>
       <name>MakeDirs</name>
       <anchorfile>structDiskInterface.html</anchorfile>
-      <anchor>a7fae01dae68b95facad54b0bc233d279</anchor>
-      <arglist>(const string &amp;path)</arglist>
+      <anchor>a27fc4c758ab7c6ea859e70451032abe5</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual std::string</type>
+      <name>ReadFile</name>
+      <anchorfile>structDiskInterface.html</anchorfile>
+      <anchor>a4bf5b9961bbefd2f8982b742c7640aba</anchor>
+      <arglist>(const std::string &amp;path, std::string *err)=0</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual string</type>
@@ -3267,6 +3305,20 @@
       <anchorfile>structStatTest.html</anchorfile>
       <anchor>ab03ec1d3435d867a44a6c92b8bed204e</anchor>
       <arglist>(const string &amp;path)</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>RemoveFile</name>
+      <anchorfile>structDiskInterface.html</anchorfile>
+      <anchor>a4e43e3304cb9a492b9c838ebb9d4ac6b</anchor>
+      <arglist>(const std::string &amp;path)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>Stat</name>
+      <anchorfile>structDiskInterface.html</anchorfile>
+      <anchor>a1c517bdda59afe399d14568ea3c3fc00</anchor>
+      <arglist>(const std::string &amp;path)=0</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -3587,6 +3639,13 @@
     </member>
     <member kind="function">
       <type>bool</type>
+      <name>ErrorAt</name>
+      <anchorfile>structTokenizer.html</anchorfile>
+      <anchor>a28a2b22db44d6d36c612d85c1fd47a7b</anchor>
+      <arglist>(const char *pos, const string &amp;message, string *err)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
       <name>ErrorExpected</name>
       <anchorfile>structTokenizer.html</anchorfile>
       <anchor>a7d7bbaccb9ebf2a97c1552d57763d488</anchor>
@@ -3605,13 +3664,6 @@
       <anchorfile>structTokenizer.html</anchorfile>
       <anchor>aaaf86a91eaa7c7fe1ff8710835faed4e</anchor>
       <arglist>(Token::Type expected, string *err)</arglist>
-    </member>
-    <member kind="function">
-      <type>SourceLocation</type>
-      <name>Location</name>
-      <anchorfile>structTokenizer.html</anchorfile>
-      <anchor>a605d2910f821ea3a214acc0f24f860f7</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -3712,17 +3764,17 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>int</type>
-      <name>line_number_</name>
-      <anchorfile>structTokenizer.html</anchorfile>
-      <anchor>a2ea32e540574c6068cddb79571a0f801</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
       <type>bool</type>
       <name>makefile_flavor_</name>
       <anchorfile>structTokenizer.html</anchorfile>
       <anchor>a0e635f8b9b9546568e679a169b1a1756</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const char *</type>
+      <name>start_</name>
+      <anchorfile>structTokenizer.html</anchorfile>
+      <anchor>ad18183c414a56f7c03c2ed957881941f</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -3759,12 +3811,26 @@
       <anchor>a04b55f1ee22d424d85244759cbd200ee</anchor>
       <arglist>(const string &amp;path)</arglist>
     </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>MakeDir</name>
+      <anchorfile>structDiskInterface.html</anchorfile>
+      <anchor>a070608053114e5c9dfa36bb92758db30</anchor>
+      <arglist>(const std::string &amp;path)=0</arglist>
+    </member>
     <member kind="function">
       <type>bool</type>
       <name>MakeDirs</name>
       <anchorfile>structDiskInterface.html</anchorfile>
-      <anchor>a7fae01dae68b95facad54b0bc233d279</anchor>
-      <arglist>(const string &amp;path)</arglist>
+      <anchor>a27fc4c758ab7c6ea859e70451032abe5</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual std::string</type>
+      <name>ReadFile</name>
+      <anchorfile>structDiskInterface.html</anchorfile>
+      <anchor>a4bf5b9961bbefd2f8982b742c7640aba</anchor>
+      <arglist>(const std::string &amp;path, std::string *err)=0</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual string</type>
@@ -3780,12 +3846,26 @@
       <anchor>adec99a414371927c9d5546b97c4e1cb0</anchor>
       <arglist>(const string &amp;path)</arglist>
     </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>RemoveFile</name>
+      <anchorfile>structDiskInterface.html</anchorfile>
+      <anchor>a4e43e3304cb9a492b9c838ebb9d4ac6b</anchor>
+      <arglist>(const std::string &amp;path)=0</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>Stat</name>
       <anchorfile>structVirtualFileSystem.html</anchorfile>
       <anchor>a0804e93b0881e23e5b78e2ff1fa5e179</anchor>
       <arglist>(const string &amp;path)</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>Stat</name>
+      <anchorfile>structDiskInterface.html</anchorfile>
+      <anchor>a1c517bdda59afe399d14568ea3c3fc00</anchor>
+      <arglist>(const std::string &amp;path)=0</arglist>
     </member>
     <member kind="variable">
       <type>vector&lt; string &gt;</type>
