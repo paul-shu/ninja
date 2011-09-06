@@ -705,6 +705,8 @@ Command output is always buffered.  This means commands running in
 <div class="sect1">
 <h2 id="_getting_started">Getting started</h2>
 <div class="sectionbody">
+<div class="paragraph"><p>Start by downloading the code from
+<a href="https://github.com/martine/ninja">the github repo</a>.</p></div>
 <div class="paragraph"><p>The included <tt>bootstrap.sh</tt> should hopefully produce a working <tt>ninja</tt>
 binary, by first blindly compiling all non-test files together then
 re-building Ninja using itself.</p></div>
@@ -812,9 +814,9 @@ variable, like how <tt>cflags</tt> is passed above.</p></div>
 targets.  For example:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>build all: phony some/file/in/a/faraway/subdir</tt></pre>
+<pre><tt>build foo: phony some/file/in/a/faraway/subdir/foo</tt></pre>
 </div></div>
-<div class="paragraph"><p>This makes <tt>ninja all</tt> build the other files.  Semantically, the
+<div class="paragraph"><p>This makes <tt>ninja foo</tt> build the longer path.  Semantically, the
 <tt>phony</tt> rule is equivalent to a plain rule where the <tt>command</tt> does
 nothing, but phony rules are handled specially in that they aren&#8217;t
 printed when run, logged (see below), nor do they contribute to the
@@ -1200,7 +1202,7 @@ to build.</p></div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2011-09-06 12:44:09 PDT
+Last updated 2011-09-06 12:53:29 PDT
 </div>
 </div>
 </body>
