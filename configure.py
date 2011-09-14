@@ -158,6 +158,12 @@ n.build('ninja', 'link', objs, implicit=ninja_lib,
         variables=[('libs', libs)])
 n.newline()
 
+n.comment('Helper for gcc dependency output.')
+objs = cxx('gcc_helper')
+n.build('ninja-gcc-helper', 'link', objs, implicit=ninja_lib,
+        variables=[('libs', libs)])
+n.newline()
+
 n.comment('Tests all build into ninja_test executable.')
 
 variables = []

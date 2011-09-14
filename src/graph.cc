@@ -140,6 +140,15 @@ string Edge::GetDescription() {
   return rule_->description_.Evaluate(&env);
 }
 
+static void SplitLines(const string& text, vector<StringPiece>* lines) {
+  size_t newline;
+  size_t ofs = 0;
+  while ((newline = text.find('\n', ofs)) != string::npos) {
+    lines->push_back(StringPiece(text.data() + ofs, newline - ofs));
+    ofs = newline + 1;
+  }
+}
+
 bool Edge::LoadDepFile(State* state, DiskInterface* disk_interface,
                        string* err) {
   EdgeEnv env(this);
@@ -151,6 +160,7 @@ bool Edge::LoadDepFile(State* state, DiskInterface* disk_interface,
   if (content.empty())
     return true;
 
+  /*
   MakefileParser makefile;
   string makefile_err;
   if (!makefile.Parse(content, &makefile_err)) {
@@ -165,10 +175,12 @@ bool Edge::LoadDepFile(State* state, DiskInterface* disk_interface,
         "got '" + makefile.out_.AsString() + "'";
     return false;
   }
+  */
+  vector<StringPiece> ins;
+  SplitLines(content, &ins);
 
   // Add all its in-edges.
-  for (vector<StringPiece>::iterator i = makefile.ins_.begin();
-       i != makefile.ins_.end(); ++i) {
+  for (vector<StringPiece>::iterator i = ins.begin(); i != ins.end(); ++i) {
     string path(i->str_, i->len_);
     CanonicalizePath(&path);
 
